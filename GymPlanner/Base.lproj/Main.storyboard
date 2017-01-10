@@ -42,6 +42,56 @@
             <point key="canvasLocation" x="937" y="-721"/>
         </scene>
         <!--Treningi-->
+        <scene sceneID="0nG-LP-QvE">
+            <objects>
+                <tableViewController title="Treningi" id="sBV-qi-W4A" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kXd-aE-eNb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8wA-bU-xsP">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8wA-bU-xsP" id="bjs-zO-5Wt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sBV-qi-W4A" id="tP3-8d-VBl"/>
+                            <outlet property="delegate" destination="sBV-qi-W4A" id="8IE-MK-hv2"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Treningi" id="LSU-5r-TwU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pDl-US-OFC"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VNR-fD-xxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="1786"/>
+        </scene>
+        <!--Navigation Treningi-->
+        <scene sceneID="PTi-qm-b99">
+            <objects>
+                <navigationController title="Navigation Treningi" id="JZD-9V-K3c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="v1V-cO-LGT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GrP-Gj-cP7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sBV-qi-W4A" kind="relationship" relationship="rootViewController" id="Kyf-R9-pMN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpw-KD-NFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="1786"/>
+        </scene>
+        <!--Treningi-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="Trainings" customModule="GymPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,6 +169,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="i6S-75-EAb" kind="relationship" relationship="viewControllers" id="9Ol-D8-igW"/>
+                        <segue destination="JZD-9V-K3c" kind="relationship" relationship="viewControllers" id="MdW-SY-leG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
