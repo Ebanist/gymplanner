@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  GymPlanner
 //
 //  Created by Adam Stolarczyk on 10.01.2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class Plan: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
