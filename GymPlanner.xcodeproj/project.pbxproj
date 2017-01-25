@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6667EFD51E393F5C00C8FCE0 /* WorkoutsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EFD41E393F5C00C8FCE0 /* WorkoutsList.swift */; };
+		6667EFD71E39414600C8FCE0 /* WorkoutAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EFD61E39414600C8FCE0 /* WorkoutAdd.swift */; };
 		66F8C2B21E2589F0004C92E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8C2B11E2589F0004C92E7 /* AppDelegate.swift */; };
 		66F8C2B41E2589F0004C92E7 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8C2B31E2589F0004C92E7 /* Plan.swift */; };
 		66F8C2B61E2589F0004C92E7 /* Trainings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8C2B51E2589F0004C92E7 /* Trainings.swift */; };
 		66F8C2B91E2589F0004C92E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F8C2B71E2589F0004C92E7 /* Main.storyboard */; };
 		66F8C2BB1E2589F0004C92E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F8C2BA1E2589F0004C92E7 /* Assets.xcassets */; };
 		66F8C2BE1E2589F0004C92E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F8C2BC1E2589F0004C92E7 /* LaunchScreen.storyboard */; };
-		66F8C2C61E258EDB004C92E7 /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8C2C51E258EDB004C92E7 /* Workouts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6667EFD41E393F5C00C8FCE0 /* WorkoutsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsList.swift; sourceTree = "<group>"; };
+		6667EFD61E39414600C8FCE0 /* WorkoutAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutAdd.swift; sourceTree = "<group>"; };
 		66F8C2AE1E2589F0004C92E7 /* GymPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F8C2B11E2589F0004C92E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F8C2B31E2589F0004C92E7 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
@@ -25,7 +28,6 @@
 		66F8C2BA1E2589F0004C92E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66F8C2BD1E2589F0004C92E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66F8C2BF1E2589F0004C92E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66F8C2C51E258EDB004C92E7 /* Workouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,8 @@
 				66F8C2B11E2589F0004C92E7 /* AppDelegate.swift */,
 				66F8C2B31E2589F0004C92E7 /* Plan.swift */,
 				66F8C2B51E2589F0004C92E7 /* Trainings.swift */,
-				66F8C2C51E258EDB004C92E7 /* Workouts.swift */,
+				6667EFD41E393F5C00C8FCE0 /* WorkoutsList.swift */,
+				6667EFD61E39414600C8FCE0 /* WorkoutAdd.swift */,
 				66F8C2B71E2589F0004C92E7 /* Main.storyboard */,
 				66F8C2BA1E2589F0004C92E7 /* Assets.xcassets */,
 				66F8C2BC1E2589F0004C92E7 /* LaunchScreen.storyboard */,
@@ -143,9 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F8C2B61E2589F0004C92E7 /* Trainings.swift in Sources */,
+				6667EFD71E39414600C8FCE0 /* WorkoutAdd.swift in Sources */,
 				66F8C2B21E2589F0004C92E7 /* AppDelegate.swift in Sources */,
 				66F8C2B41E2589F0004C92E7 /* Plan.swift in Sources */,
-				66F8C2C61E258EDB004C92E7 /* Workouts.swift in Sources */,
+				6667EFD51E393F5C00C8FCE0 /* WorkoutsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +311,7 @@
 				66F8C2C41E2589F0004C92E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

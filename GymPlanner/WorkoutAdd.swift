@@ -1,15 +1,19 @@
 //
-//  Workouts.swift
+//  WorkoutAdd.swift
 //  GymPlanner
 //
-//  Created by Adam Stolarczyk on 10.01.2017.
+//  Created by Adam Stolarczyk on 25.01.2017.
 //  Copyright © 2017 Adam. All rights reserved.
 //
 
 import UIKit
 
-class Workouts: UIViewController {
+class WorkoutAdd: UIViewController {
+    
+    var name: String = ""
 
+    @IBOutlet weak var workoutName: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +35,14 @@ class Workouts: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addSegue" {
+            name = workoutName.text!
+        }
+    }
+    
+
+    
 
 }
