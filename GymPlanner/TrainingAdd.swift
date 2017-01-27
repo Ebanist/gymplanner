@@ -1,5 +1,5 @@
 //
-//  WorkoutAdd.swift
+//  TrainingAdd.swift
 //  GymPlanner
 //
 //  Created by Adam Stolarczyk on 25.01.2017.
@@ -8,14 +8,12 @@
 
 import UIKit
 
-class WorkoutAdd: UIViewController {
-    
-    var wName:String = ""
-    var wDescription:String = ""
+class TrainingAdd: UIViewController {
 
-    @IBOutlet weak var workoutName: UITextField!
+    var name:String = ""
     
-    @IBOutlet weak var workoutDescription: UITextField!
+    
+    @IBOutlet weak var trainingName: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +38,10 @@ class WorkoutAdd: UIViewController {
     */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addWorkoutSegue" {
-            wName = workoutName.text!
-            wDescription = workoutDescription.text!
+        
+        if segue.identifier == "addTrainingSegue" {
+            name = trainingName.text!
         }
     }
-    
-
-    
 
 }

@@ -1,5 +1,5 @@
 //
-//  WorkoutsList.swift
+//  TraningsList.swift
 //  GymPlanner
 //
 //  Created by Adam Stolarczyk on 25.01.2017.
@@ -8,21 +8,21 @@
 
 import UIKit
 
-class WorkoutsList: UITableViewController {
-    
-    var workouts = [Workout]()
+class TrainingsList: UITableViewController {
 
+    var trainings = [String]()
+    var newTraining = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let w1 = Workout(name: "Podciąganie", description: "Szeroko na maszynie")
-        let w2 = Workout(name: "Przysiady", description: "Ze sztangą")
-        let w3 = Workout(name: "Wyciskanie", description: "Na ławeczce płaskiej")
-        
-        workouts.append(w1)
-        workouts.append(w2)
-        workouts.append(w3)
+        trainings = ["Plecy", "Klatka", "Nogi"]
 
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,22 +39,18 @@ class WorkoutsList: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return workouts.count
+        return trainings.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell", for: indexPath) as? WorkoutCell {
-            
-            let workout = workouts[indexPath.row]
-            
-            cell.updateUI(workout: workout)
-            return cell
-            
-        } else {
-            return UITableViewCell()
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "trainingCell", for: indexPath)
+        
+        cell.textLabel?.text = trainings[indexPath.row]
+    
+
+        return cell
     }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -101,18 +97,18 @@ class WorkoutsList: UITableViewController {
     }
     */
     
-    @IBAction func cancelToWorkouts(segue:UIStoryboardSegue) {
+    @IBAction func cancelToTrainings(segue:UIStoryboardSegue) {
     }
     
-    @IBAction func addToWorkouts(segue:UIStoryboardSegue) {
-        let addWorkoutVC = segue.source as! WorkoutAdd
-        let newWorkout = Workout(name: addWorkoutVC.wName, description: addWorkoutVC.wDescription)
+    @IBAction func addToTranings(segue:UIStoryboardSegue) {
+        let addTrainingVC = segue.source as! TrainingAdd
+        newTraining = addTrainingVC.name
         
-        workouts.append(newWorkout)
+        trainings.append(newTraining)
         
         self.tableView.reloadData()
         
     }
-    
+
 
 }
