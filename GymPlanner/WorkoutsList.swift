@@ -105,12 +105,13 @@ class WorkoutsList: UITableViewController {
     }
     
     @IBAction func addToWorkouts(segue:UIStoryboardSegue) {
-        let addWorkoutVC = segue.source as! WorkoutAdd
-        let newWorkout = Workout(name: addWorkoutVC.wName, description: addWorkoutVC.wDescription)
+        if let addWorkoutVC = segue.source as? WorkoutAdd {
+            let newWorkout = Workout(name: addWorkoutVC.wName, description: addWorkoutVC.wDescription)
         
-        workouts.append(newWorkout)
+            workouts.append(newWorkout)
         
-        self.tableView.reloadData()
+            self.tableView.reloadData()
+        }
         
     }
     

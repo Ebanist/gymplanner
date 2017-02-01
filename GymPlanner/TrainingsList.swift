@@ -101,12 +101,13 @@ class TrainingsList: UITableViewController {
     }
     
     @IBAction func addToTranings(segue:UIStoryboardSegue) {
-        let addTrainingVC = segue.source as! TrainingAdd
-        newTraining = addTrainingVC.name
+        if let addTrainingVC = segue.source as? TrainingAdd {
+            newTraining = addTrainingVC.name
         
-        trainings.append(newTraining)
+            trainings.append(newTraining)
         
-        self.tableView.reloadData()
+            self.tableView.reloadData()
+        }
         
     }
 
